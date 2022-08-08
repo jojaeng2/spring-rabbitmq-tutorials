@@ -24,6 +24,7 @@ public class NewTask {
 
             try (Connection connection = factory.newConnection();
                  Channel channel = connection.createChannel()) {
+
                 boolean durable = true;
                 channel.queueDeclare(QUEUE_NAME, durable, false, false, null);
 
